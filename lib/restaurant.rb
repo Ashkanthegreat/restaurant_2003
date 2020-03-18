@@ -18,4 +18,11 @@ class Restaurant
   def open_for_lunch?
     (@opening_time.chomp(':00').to_i) < 12
   end
+
+  def menu_dish_names
+    excited = []
+    @dishes.each { |dish| excited << dish.upcase }
+    excited
+  end
+
 end
