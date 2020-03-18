@@ -25,4 +25,13 @@ class Restaurant
     excited
   end
 
+  def announce_closing_time(hours_open)
+    announcement = @name.concat(' will be closing at')
+
+    time_closing = (@opening_time.chomp(':00').to_i + hours_open).to_s.concat(':00')
+
+    announcement + time_closing
+
+  end
+
 end
